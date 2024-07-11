@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel= "stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <title>Fuzzy Logic - Food Temperature</title>
+    <link rel="stylesheet" href="css/foodtemp.css"/>
+  </head>
+  <body>
+    <h2 class="header">
+      <span class="title-word title-word-1">F</span>
+      <span class="title-word title-word-1">O</span>
+      <span class="title-word title-word-1">O</span>
+      <span class="title-word title-word-1">D</span>
+      <span class="title-word title-word-2">&nbsp</span>
+      <span class="title-word title-word-2">T</span>
+      <span class="title-word title-word-2">E</span>
+      <span class="title-word title-word-2">M</span>
+      <span class="title-word title-word-3">P</span>
+      <span class="title-word title-word-3">E</span>
+      <span class="title-word title-word-3">R</span>
+      <span class="title-word title-word-3">A</span>
+      <span class="title-word title-word-4">T</span>
+      <span class="title-word title-word-4">U</span>
+      <span class="title-word title-word-4">R</span>
+      <span class="title-word title-word-4">E</span>
+    </h2>
+    <div>
+
+      <table>
+        <tr>
+          <td class="t" columnspan="2" style="text-align: center;">LEGEND</td>
+        </tr>
+        <tr>
+          <td>Frozen Zone (-10°C)</td>
+          <td>FZ</td>
+        </tr>
+        <tr>
+          <td>Chilled Zone (-9°C to 0°C)</td>
+          <td>CZ</td>
+        </tr>
+        <tr>
+          <td>Danger Zone (1°C to 5°C)</td>
+          <td>DZ</td>
+        </tr>
+        <tr>
+          <td>Hot Zone (6°C to 60°C)</td>
+          <td>HZ</td>
+        </tr>
+        <tr>
+          <td>Boiling Zone (61°C to 100°C)</td>
+          <td>BZ</td>
+        </tr>
+      </table>
+      <div><p class="def" id="def"></p></div>
+      </div>
+      
+    <div id="wrapper">
+    <div id="termometer">
+        <div id="temperature" style="height:0" data-value="0°C"></div>
+        <div id="graduations"></div>
+    </div>
+
+    <div id="playground">
+
+        <div id="range">
+            <input id="minTemp" type="text" value="-10°C">
+            <input type="range" min="-10" max="100" value="100">
+            <input id="maxTemp" type="text" value="100°C">
+          </div>
+
+        <div class="container">
+        <p span id="temp"></span></p>
+        <p span id="change"></span></p>
+        <p id="fuzzy"></p>
+        
+      </div>
+    </div>
+</div>
+
+<script src="js/foodtemp.js"></script>
+</body>
+</html>
