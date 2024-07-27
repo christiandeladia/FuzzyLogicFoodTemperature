@@ -1,62 +1,63 @@
-body 
-  {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-  }
-  .container
-  {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-  }
-  .container h1{
-    text-align: center;
-    font-size: 100px;
-    align-items: center;
-    font-weight: bolder;
-    color: #15f4ee;
-    position: relative;
-    text-transform: uppercase;
-    margin: 0;
-    width: 800px;
-    line-height: 1;
-  }
-  .container h3{
-    text-align: center;
-    top: 30px;
-    font-size: 30px;
-    align-items: center;
-    font-weight: bolder;
-    color: #68b8b480;
-    position: relative;
-    margin: 0;
-    width: 800px;
-    line-height: 1;
-  }
-  .button
-  {
-      position: relative;
-      top: 150px;
-      text-align: center;
-      width: 300px;
-      left: 230px;
-      padding: 20px;
-      font-size: 30px;
-      color: #15f4ee;
-      font-family: poppins;
-      font-weight: 400;
-      border: 4px solid #15f4ee;
-      text-transform: uppercase;
-      letter-spacing: 15px;
-      cursor: pointer;
-      border-radius: 100px;
-      transition: 1.5s;
-  }
-  .button:hover
-  {
-      box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee,
-                  0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
-      text-shadow: 0 0 5px #15f4ee, 0 0 5px #15f4ee;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 20px;
+}
+
+.container a{
+  text-decoration: none;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 100px;
+  font-weight: bolder;
+  color: #15f4ee;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  width: 100%;
+  line-height: 1;
+}
+
+.container h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #68b8b480;
+  margin-bottom: 60px;
+  width: 100%;
+  line-height: 1;
+}
+
+.button {
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+  font-size: 30px;
+  color: #15f4ee;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  border: 4px solid #15f4ee;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 1.5s;
+  margin-top: 20px;
+}
+
+
+.button:hover {
+  box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee,
+              0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
+  text-shadow: 0 0 5px #15f4ee, 0 0 5px #15f4ee;
+}

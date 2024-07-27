@@ -1,0 +1,85 @@
+/* Mobile devices (portrait and landscape) */
+@media (max-width: 767px) {
+    .container {
+        height: 70vh;
+    }
+    
+    .container h1 {
+        font-size: 50px;
+        width: 100%;
+    }
+    
+    .container h3 {
+        font-size: 20px;
+        width: 100%;
+    }
+    
+    .button {
+        font-size: 20px;
+        padding: 15px;
+        letter-spacing: 10px;
+    }
+}
+
+/* Tablets (portrait and landscape) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        height: 70vh;
+    }
+    
+    .container h1 {
+        font-size: 70px;
+        width: 100%;
+    }
+    
+    .container h3 {
+        font-size: 25px;
+        width: 100%;
+    }
+    
+    .button {
+
+        font-size: 25px;
+        padding: 18px;
+        letter-spacing: 12px;
+    }
+}
+
+/* Small desktop and laptops */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container h1 {
+        font-size: 80px;
+        width: 90%;
+    }
+    
+    .container h3 {
+        font-size: 28px;
+        width: 90%;
+    }
+    
+    .button {
+
+        font-size: 28px;
+        padding: 20px;
+        letter-spacing: 13px;
+    }
+}
+
+/* Large desktop and laptops */
+@media (min-width: 1280px) {
+    .container h1 {
+        font-size: 100px;
+        width: 800px;
+    }
+    
+    .container h3 {
+        font-size: 30px;
+        width: 800px;
+    }
+    
+    .button {
+        font-size: 30px;
+        padding: 20px;
+        letter-spacing: 15px;
+    }
+}
