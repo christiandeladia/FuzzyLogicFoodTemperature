@@ -12,9 +12,10 @@ body{
   margin: 0;
 }
 
-    .item1 { grid-area: h; }
-    .item2 { grid-area: l; }
-    .item3 { grid-area: r; }
+    .top { grid-area: h; }
+    .left { grid-area: l; }
+    .right { grid-area: r; }
+    .mid { grid-area: m; }
     
     
     .grid-container {
@@ -22,8 +23,8 @@ body{
       height: 100%;
       grid-template-areas:
         'h h h h h h'
-        'l l l r r r'
-        'l l l r r r';
+        'l l m m r r'
+        'l l m m r r';
       gap: 10px;
       background: #3d3d44;
       padding: 10px;
@@ -251,7 +252,7 @@ body{
 
 <body>
     <div class="grid-container">
-        <div class="item1">
+        <div class="top">
             <h2 class="header">
                 <span class="title-word title-word-1">F</span>
                 <span class="title-word title-word-1">O</span>
@@ -271,7 +272,17 @@ body{
                 <span class="title-word title-word-4">E</span>
               </h2>
         </div>
-        <div class="item2">
+
+
+        <div class="left">
+          <div class="container def">
+            <p span id="temp"></span></p>
+            <p span id="change"></span></p>
+            <p id="fuzzy"></p>
+            </div>
+        </div>
+
+        <div class="mid">
           <div id="wrapper">
             <div id="termometer">
                 <div id="temperature" style="height:0" data-value="0°C"></div>
@@ -284,19 +295,15 @@ body{
                     <input id="minTemp" type="text" value="-10°C">
                     <input type="range" min="-10" max="100" value="100">
                     <input id="maxTemp" type="text" value="100°C">
-                  </div>
+                </div>
         
-                <div class="container">
-                <p span id="temp"></span></p>
-                <p span id="change"></span></p>
-                <p id="fuzzy"></p>
-                
-              </div>
             </div>
+          </div>
         </div>
+
         
-        </div>
-        <div class="item3">
+
+        <div class="right">
           <div>
             <table>
               <tr>
@@ -322,7 +329,7 @@ body{
                 <td>Boiling Zone (61°C to 100°C)</td>
                 <td>BZ</td>
               </tr>
-            </table>
+            </table> 
             <div><p class="def" id="def"></p></div>
           </div>
         </div>  
