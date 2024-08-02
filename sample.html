@@ -4,37 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/foodtemp.css"/>
+    <link rel="stylesheet" href="css/foodtemps.css"/>
 
 </head>
 <style>
-body{
-  margin: 0;
-}
+  body {
+    display: flex;
+    margin: 0;
+    background: #3d3d44;
+    font-family: "Jaldi", sans-serif;
+    font-size: 14px;
+    color: white;
+
+  }
 
     .top { grid-area: h; }
     .left { grid-area: l; }
     .right { grid-area: r; }
+    .bottomright { grid-area: br; }
     .mid { grid-area: m; }
     
     
     .grid-container {
       display: grid;
       height: 100%;
+      width: 80%;
       grid-template-areas:
         'h h h h h h'
         'l l m m r r'
-        'l l m m r r';
+        'l l m m br br';
       gap: 10px;
       background: #3d3d44;
       padding: 10px;
+      margin: 0 auto;
+    }
+
+    .left, .mid, .right{
+      min-width: 100%;
+      display: flex;
     }
     
-    .grid-container > div {
-      text-align: center;
-      padding: 20px 0;
-      font-size: 30px;
-    }
+
 
 
 
@@ -177,38 +187,32 @@ body{
     }
     
     table {
-        position: sticky;
         height: 350px;
-        
         width: 300px;
         color: rgb(67, 239, 252);
         font-size: 15px;
-        margin-top: 200px;
-        margin-left: 300px;
         border: 1px solid;
         text-align: left;
         padding: 10px;
+        margin: auto;
       }
-    .t {
+
+    .tableHeader{
       font-size: 20px;
       font-weight: bold;
-      padding-left: 20px;
+      text-align: center;
     }
     
     
     .def{
-      position: relative;
       height: 80px;
       color: #db8070;
       width: 350px;
       font-size: 18px;
-      margin-bottom: 100px;
-      margin-left: 260px;
       border: 2px solid;
-      text-align: left;
-      text-align: center;
       line-height: 0.5;
       padding: 10px;
+      margin: auto;
     }
     
     .title-word {
@@ -248,6 +252,18 @@ body{
       99%   {color: var(--color-3)}
       100%  {color: var(--color-1)}
     }
+
+    .header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 80px;
+    padding-top: 20px;
+    align-items: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 0;
+    width: 100%;
+  }
 </style>
 
 <body>
@@ -275,11 +291,26 @@ body{
 
 
         <div class="left">
-          <div class="container def">
+          <!-- <div class="container def">
             <p span id="temp"></span></p>
             <p span id="change"></span></p>
             <p id="fuzzy"></p>
-            </div>
+          </div> -->
+
+          <table>
+            <tr>
+              <td class="tableHeader" colspan="2">COMPUTATIONS</td>
+            </tr>
+            <tr>
+              <td id="temp"></td>
+            </tr>
+            <tr>
+              <td id="change"></td>
+            </tr>
+            <tr>
+              <td id="fuzzy"></td>
+            </tr>
+          </table>
         </div>
 
         <div class="mid">
@@ -304,10 +335,9 @@ body{
         
 
         <div class="right">
-          <div>
             <table>
               <tr>
-                <td class="t" columnspan="2" style="text-align: center;">LEGEND</td>
+                <td class="tableHeader" colspan="2">LEGEND</td>
               </tr>
               <tr>
                 <td>Frozen Zone (-10°C)</td>
@@ -330,9 +360,18 @@ body{
                 <td>BZ</td>
               </tr>
             </table> 
-            <div><p class="def" id="def"></p></div>
-          </div>
-        </div>  
+        </div>
+        
+        <div class="bottomright">
+          <table>
+            <tr>
+              <td class="tableHeader" colspan="2">VALUE</td>
+            </tr>
+            <tr>
+              <td id="def"></td>
+            </tr>
+          </table>
+        </div>
       
       </div>
 
